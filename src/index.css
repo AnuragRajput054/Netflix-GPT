@@ -2,3 +2,21 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide the scrollbar for Microsoft browsers (Internet Explorer and Edge) */
+  .no-scrollbar {
+      /* Hide the scrollbar for Microsoft browsers */
+      -ms-overflow-style: none;
+  
+      /* Hide the scrollbar for Firefox */
+      scrollbar-width: none;
+  }
+
+  /* .login{
+         background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png");
+         background-color: black;
+  } */
