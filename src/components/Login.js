@@ -6,10 +6,10 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+import { BG_URL } from "../utils/constaint";
 
 const Login = () => {
-  const nevigate = useNavigate();
+ 
   const [isSignForm, setIsSignForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
   const email = useRef(null);
@@ -28,17 +28,17 @@ const Login = () => {
     if (message) return;
 
     if (!isSignForm) {
-      // sign up logic
+    
       createUserWithEmailAndPassword(
         auth,
         email.current.value,
         password.current.value
       )
         .then((userCredential) => {
-          // Signed up
+         
           const user = userCredential.user;
           console.log(user);
-          nevigate("/browse");
+       
 
         })
         .catch((error) => {
@@ -47,7 +47,7 @@ const Login = () => {
           setErrorMessage(errorCode + "-" + errorMessage);
         });
     } else {
-      // sign in logic
+     
 
       signInWithEmailAndPassword(
         auth,
@@ -55,10 +55,10 @@ const Login = () => {
         password.current.value
       )
         .then((userCredential) => {
-          // Signed in
+        
           const user = userCredential.user;
-          console.log(user);
-          nevigate("/browse");
+        //  console.log(user);
+      
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -71,13 +71,17 @@ const Login = () => {
   return (
     <div>
       <Header />
+
+      
       <div className=" absolute">
         <img
           className="w-screen"
-          src="https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png"
+          src={BG_URL}
           alt="img"
         ></img>
       </div>
+
+
       <form
         className="absolute w-3/12 overflow-hidden max-w-screen-sm h-auto my-28 mx-auto bg-opacity-80 rounded-lg right-0 left-0 p-8 bg-black text-white"
         onSubmit={(e) => e.preventDefault()}
