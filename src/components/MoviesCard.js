@@ -3,10 +3,9 @@ import { IMG_CDN_URL } from '../utils/constaint';
 
 const MoviesCard = ({posterPath}) => {
   return (
-    <div className="w-36 md:w-48 pr-4 rounded-lg">
-
+    <div className="md:w-48 w-40 pr-4 transition-transform transform hover:scale-90 cursor-pointer">
         <img alt='movies' src= {IMG_CDN_URL + posterPath} 
-         className='cursor-pointer hover:border hover:scale-110 hover:z-50'
+         className='object-cover rounded-lg'
         />
       
     </div>

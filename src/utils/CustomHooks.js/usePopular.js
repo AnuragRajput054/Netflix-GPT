@@ -21,7 +21,7 @@ const usePopular = () => {
  
  
        const json = await data.json();
-       console.log(json);
+     
        dispatch(addPopular(json.results));
     };
  

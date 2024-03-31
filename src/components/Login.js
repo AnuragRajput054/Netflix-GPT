@@ -14,7 +14,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const email = useRef(null);
   const password = useRef(null);
-  // const name = useRef(null);
+// const name = useRef(null);
 
   const toggleSignInForm = () => {
     setIsSignForm(!isSignForm);
@@ -92,7 +92,7 @@ const Login = () => {
 
         {!isSignForm && (
           <input
-            // ref={name}
+          //  ref={name}
             type="text"
             placeholder="Name"
             required

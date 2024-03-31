@@ -15,7 +15,7 @@ const useTopRated = () => {
 
     const getTopRated = async () =>{
      const data = await fetch(
-'https://api.themoviedb.org/3/movie/top_rated',
+  'https://api.themoviedb.org/3/movie/top_rated',
       API_OPTIONS
      );
  

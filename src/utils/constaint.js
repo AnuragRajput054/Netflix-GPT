@@ -13,4 +13,26 @@ export const LOGO =
     }
   };
 
+   
+  export const SUPPORTED_LANGUAGE = [
+    {identifier:"en" , name:"English"} ,
+    {identifier:"Hindi" , name:"हिन्दी"} ,
+    {identifier:"Spanish" , name:"Spanish"} ,
+    {identifier:"Punjabi" , name:"Punjabi"} ,
+    {identifier:"Chinese" , name:"Chinese"} ,
+
+  ];
+
+
+
+
+
+
+
+
+
+
+
+
+
   export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";

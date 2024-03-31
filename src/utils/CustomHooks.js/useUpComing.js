@@ -15,7 +15,7 @@ const useUpComing = () => {
 
     const getUpComing = async () =>{
      const data = await fetch(
-   'https://api.themoviedb.org/3/movie/upcoming',
+   'https://api.themoviedb.org/3/tv/top_rated',
       API_OPTIONS
      );
  
